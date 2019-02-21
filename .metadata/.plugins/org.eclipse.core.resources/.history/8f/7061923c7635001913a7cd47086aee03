@@ -20,11 +20,11 @@ public class TestServlet extends HttpServlet{
 		PrintWriter out = resp.getWriter();
 		
 		String fname = req.getParameter("firstname");
-		System.out.printf("%s first name %s\n ", TAG ,fname ) ;
+		System.out.printf("%s first name %s ", TAG ,fname ) ;
 		String lname = req.getParameter("lastname");
-		System.out.printf("%s last name %s\n ", TAG ,lname) ;
+		System.out.printf("%s first name %s ", TAG ,lname) ;
 		String email = req.getParameter("email");
-		System.out.printf("%s email address %s\n ", TAG ,email) ;
+		System.out.printf("%s first name %s ", TAG ,email) ;
 		
 		log("first name => " + fname);
 		log("first name => " + lname);
