@@ -8,7 +8,7 @@
 <h3>Your Information</h3>
 <br>
 
-<form action="display_email_entry.jsp" method="get">
+<form action="addToEmailList" method="get">
 
 	<table>
 		<tr>
@@ -70,7 +70,7 @@
 	 <textarea name="comment" rows="5" cols="40" placeholder="Enter your comment here"></textarea>
 	
 	<br><br>
-	<input type="submit" value="Submit"> 
+	<input type="submit" value="Submit" onclick="return validate(this.form)"> 
 	<input type="reset" value="Reset">
 </form>
 <br><br>
@@ -78,14 +78,7 @@
 <p>(JAVASCRIPT DATE)</p>
 <h3 id="dateDisplay"></h3>
 
-<script type="text/javascript">
-	
-	function ticker(){
-		document.getElementById("dateDisplay").innerHTML = new Date();
-	}
-	
-	setInterval(ticker, 1000);
-	
+<script type="text/javascript" src="script/form_entry.js">
 </script>
 
 <!-- Footer page include -->

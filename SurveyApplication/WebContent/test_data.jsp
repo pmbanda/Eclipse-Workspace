@@ -1,6 +1,6 @@
 <jsp:directive.include file="header.jsp"/>
 
-<form action="addToEmailList" method="post">
+<form action="testServlet" method="post">
 
 	<table>
 		<tr>

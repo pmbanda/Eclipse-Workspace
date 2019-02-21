@@ -4398,3 +4398,6 @@ java.lang.IllegalArgumentException: Argument not valid
 !MESSAGE No repository found containing: osgi.bundle,org.eclipse.epp.mpc.ui.css,1.7.4.v20190206-1730
 !SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2019-02-20 18:41:16.773
 !MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.epp.mpc,1.7.4.v20190206-1749
+
+!ENTRY org.eclipse.jface.text 2 0 2019-02-21 01:19:07.565
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'

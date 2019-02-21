@@ -9,6 +9,16 @@
   
   <servlet-mapping>
   	<servlet-name>TestServlet</servlet-name>
+  	<url-pattern>/testServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddToEmailListServlet</servlet-name>
+  	<servlet-class>email.AddToEmailListServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddToEmailListServlet</servlet-name>
   	<url-pattern>/addToEmailList</url-pattern>
   </servlet-mapping>
   
