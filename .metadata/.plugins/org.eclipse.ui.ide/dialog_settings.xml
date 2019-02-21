@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Tomcat\webapps\netbeans\book_apps\ch14email"/>
+		<item value="C:\Tomcat\webapps"/>
+		<item value="C:\Tomcat\webapps\musicStore"/>
+		<item value="C:\murach\servlet_and_jsp\netbeans\book_apps\musicStore"/>
+		<item value="C:\murach"/>
+		<item value="C:\Users\Corpaaaa\Documents\Workspace Global\ResumeProject"/>
+		<item value="C:\Users\Corpaaaa\Documents\Workspace Global\Java Workspace\My Fitness App"/>
+		<item value="C:\Tomcat\webapps\netbeans\WebContent"/>
+		<item value="C:\Tomcat\webapps\netbeans"/>
+	</list>
+</section>

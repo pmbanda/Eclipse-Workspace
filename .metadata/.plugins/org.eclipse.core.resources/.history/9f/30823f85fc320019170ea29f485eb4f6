@@ -1,0 +1,21 @@
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Test Jsp</title>
+	</head>
+<body>
+<%! Date date = new Date(); %>
+<h2>Test JSP Page</h2>
+<form action="testServlet" method="get">
+	User Name: <input type="text">
+	<input type="submit" value="submit">
+</form>
+<p>Todays Date is <%=date.toGMTString() %></p>
+<a href="join.html">Join our root email</a>
+<a href="META-INF/join.html">Join our tree email</a>
+</body>
+</html>

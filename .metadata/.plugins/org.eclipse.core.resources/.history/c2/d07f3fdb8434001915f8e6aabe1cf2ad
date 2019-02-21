@@ -1,0 +1,13 @@
+<%@page import="java.util.Date"%>
+<hr>
+
+<footer>
+  <p>Posted by: Mansory Inc</p>
+  <p>Contact information: <a href="mailto:someone@example.com">
+  Email Contact</a>.</p>
+  <small>&copy All Rights reserved, no animals harmed during website production &regMansory Inc <%= new Date() %></small>
+</footer>
+
+
+</body>
+</html>

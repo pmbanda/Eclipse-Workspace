@@ -1,0 +1,7 @@
+<%@page import="java.util.Date"%>
+<hr>
+<footer>
+<small>&copy All Rights reserved, no animals harmed during website production &regMansory Inc <%= new Date() %></small>
+</footer>
+</body>
+</html>

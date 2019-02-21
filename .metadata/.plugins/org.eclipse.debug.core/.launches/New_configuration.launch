@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.google.cloud.tools.eclipse.appengine.AppToolsLaunchConfigurationType">
+<stringAttribute key="com.google.cloud.tools.eclipse.gcpEmulation.accountEmail" value="pmbandaft@gmail.com"/>
+<mapAttribute key="org.eclipse.debug.core.environmentVariables">
+<mapEntry key="GOOGLE_CLOUD_PROJECT" value="resumeshowcase"/>
+</mapAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+</launchConfiguration>

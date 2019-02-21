@@ -1,0 +1,102 @@
+<%@page import="java.util.Date"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Test Jsp</title>
+		<link rel=stylesheet href=styles/survey.css />
+	</head>
+<body>
+<img alt="Murach Logo" src="images/murachlogo.jpg">
+<h2>Test JSP Page</h2>
+
+<br><br>
+
+<form action="data.jsp" method="get">
+	First name: <input type="text" name="firstname" required placeholder="Enter first name" maxlength="20"> <br/>
+	Last name: <input type="text" name="lastname" required placeholder="Enter last name"><br>
+	Email: <input type="text" name="email" required placeholder="Enter email address"><br>
+	DOB:   <input type="text" name="dob" required placeholder="Enter DOB">
+	
+	<br><br>
+	 
+	Programming Language: 
+	<input type="radio" name="Plang" value="Java">Java
+	<input type="radio" name="Plang" value="PHP">PHP 
+	<input type="radio" name="Plang" value="Ruby" checked>Ruby 
+	<input type="radio" name="Plang" value="Python">Python 
+	<input type="radio" name="Plang" value="Haskell">Haskel 
+	
+	<br><br>
+	 
+	Favorite food: 
+	<input type="checkbox" name="Cassava" >Cassava
+	<input type="checkbox" name="Guava">Guava 
+	<input type="checkbox" name="Rice">Rice 
+	<input type="checkbox" name="Beef">Beef 
+	<input type="checkbox" name="Pork" checked>Pork 
+	
+	<br><br>
+	
+
+	Select State(single):: <select name="state">
+		<option value="AL">Alabama</option>
+		<option value="AK">Arkansas</option>
+		<option value="AZ">Arizona</option>
+		<option value="CA">California</option>
+		<option value="OK">Oklahoma</option>
+		<option value="CO">Colorado</option>
+		<option value="CT">Connecticut</option>
+
+
+	</select>
+	
+	
+	<br><br>
+	
+	<br><br>
+	
+
+	Select State(multiple)<br>
+	<select name="state" multiple>
+		<option value="AL">Alabama</option>
+		<option value="AK">Arkansas</option>
+		<option value="AZ">Arizona</option>
+		<option value="CA">California</option>
+		<option value="OK">Oklahoma</option>
+		<option value="CO">Colorado</option>
+		<option value="CT">Connecticut</option>
+
+
+	</select>
+	
+	<br><br>
+	
+	Comment::<br>
+	 <textarea rows="10" cols="60" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."></textarea>
+	
+	<br><br>
+	<input type="submit" value="Submit"> 
+	<input type="reset" value="Reset">
+</form>
+<br><br>
+<p>(JAVA DATE)Todays Date is <%= new Date().toString() %></p>
+<p>(JAVASCRIPT DATE)</p>
+<h3 id="dateDisplay"></h3>
+
+<a href=/WebContent/join.html>Join our root email</a>
+<a href=META-INF/join.html>Join our tree email</a>
+
+<script type="text/javascript">
+	
+	function ticker(){
+		document.getElementById("dateDisplay").innerHTML = new Date();
+	}
+	
+	setInterval(ticker, 1000);
+	
+</script>
+</body>
+</html>

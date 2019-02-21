@@ -1,0 +1,5 @@
+<%@page import="java.util.Date"%>
+<hr>
+<small>&copy All Rights reserved, no animals harmed during website production &reg to Mansory Inc <%= new Date() %></small>
+</body>
+</html>

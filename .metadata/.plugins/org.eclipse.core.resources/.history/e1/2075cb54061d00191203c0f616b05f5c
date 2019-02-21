@@ -1,0 +1,25 @@
+
+public class StringPermutation {
+
+	public static void main(String[] args) {
+		String str = "myiadnc";
+		permutation(str, "");
+
+	}
+
+	static void permutation(String str, String prefix) {
+		String rem = null;
+		if (str.length() == 0) {
+			if (rem.startsWith("cand") || rem.startsWith("cind") || rem.startsWith("mind") || rem.startsWith("dan")
+					|| rem.startsWith("dam") || rem.startsWith("day") || rem.startsWith("acid") || rem.startsWith("and")
+					|| rem.startsWith("am") || rem.startsWith("ad") || rem.startsWith("mad") || rem.startsWith("mid")) {
+				System.out.println(prefix);
+			}
+		} else {
+			for (int i = 0; i < str.length(); i++) {
+				rem = str.substring(0, i) + str.substring(i + 1);
+				permutation(rem, prefix + str.charAt(i));
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+Feb 19, 2019 14:53:06.09 NEW SESSION
+Feb 19, 2019 14:53:06.09 [2688:16324:0219/145305.907:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 14:53:08.17 [2688:16324:0219/145308.178:ERROR:browser_process_sub_thread.cc(209)] Waited 475 ms for network service
+Feb 19, 2019 14:53:26.51 [5332:15892:0219/145326.513:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 14:53:47.64 [5332:15892:0219/145347.640:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 14:53:58.93 [5332:18984:0219/145358.938:ERROR:account_tracker.cc(240)] AccessTokenFetched error: Connection failed (-106).
+Feb 19, 2019 14:54:33.73 [5332:15892:0219/145433.737:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 14:55:10.85 [5332:18984:0219/145510.855:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 14:55:38.38 [5332:18984:0219/145538.379:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 14:56:28.62 [5332:15892:0219/145628.625:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 14:56:33.19 [5332:18984:0219/145633.193:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 14:57:56.61 [5332:18984:0219/145756.615:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 15:00:20.47 [5332:15892:0219/150020.471:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 15:01:24.86 [5332:18984:0219/150124.860:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 18:05:07.13 [5332:18984:0219/180507.137:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 18:05:09.89 [5332:15892:0219/180509.625:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 19, 2019 21:27:46.56 [5332:15892:0219/212746.565:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -7
+Feb 19, 2019 21:27:51.09 [5332:18984:0219/212750.966:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 21:28:01.91 [5332:15892:0219/212801.913:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+Feb 19, 2019 23:19:04.50 [5332:18984:0219/231904.500:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+Feb 19, 2019 23:19:04.84 [5332:15892:0219/231904.843:ERROR:socket_stream.cc(219)] Closing stream with result -2
+Feb 19, 2019 23:19:05.38 [5332:15892:0219/231905.383:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+Feb 20, 2019 02:11:38.64 [5332:15892:0220/021135.640:ERROR:socket_stream.cc(219)] Closing stream with result -2
+Feb 20, 2019 02:11:39.26 [5332:15892:0220/021139.263:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+Feb 20, 2019 03:26:43.77 [5332:18984:0220/032643.696:ERROR:http_bridge.cc(126)] NOT IMPLEMENTED
+Feb 20, 2019 03:26:45.55 [5332:15892:0220/032645.557:ERROR:browser_process_sub_thread.cc(209)] Waited 17 ms for network service
+
+Feb 20, 2019 17:29:47.05 NEW SESSION
+Feb 20, 2019 17:29:47.05 [15560:1996:0220/172947.034:ERROR:http_bridge.cc(126)] NOT IMPLEMENTED
+Feb 20, 2019 17:29:47.53 [15560:8440:0220/172947.534:ERROR:browser_process_sub_thread.cc(209)] Waited 144 ms for network service
+Feb 20, 2019 17:57:07.55 [4448:3792:0220/175707.550:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -106
+Feb 20, 2019 17:57:24.09 [4448:3792:0220/175724.099:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
