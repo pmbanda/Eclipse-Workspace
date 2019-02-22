@@ -27,25 +27,38 @@ public class AddToEmailListServlet extends HttpServlet{
 		firstName = request.getParameter("firstname");
 		lastName = request.getParameter("lastname");
 		email = request.getParameter("email");
-		comment = request.getParameter("comment");
-		dateOfBirth = request.getParameter("dob");
-		information = request.getParameter("info");
-		newsletter = request.getParameter("newsletter");
-		contact = request.getParameter("contact");
 		
+//		comment = request.getParameter("comment");
+//		dateOfBirth = request.getParameter("dob");
+//		information = request.getParameter("info");
+//		newsletter = request.getParameter("newsletter");
+//		contact = request.getParameter("contact");
 		
-		// EmailList.txt absolute file path on server 
-		SC = this.getServletContext(); 
-		String path = SC.getRealPath("/WEB-INF/EmailList.txt");
-				
 		// Instantiate user
 		User user = new User(firstName, lastName, email);
-		UserIO.add(user, path);
+		
+		// validate parameters on server
+		String message = "";
+		String url = "";
+		
+		if(firstName.length() <= 3 || lastName.length() <= 3 || email.length() <= 3) {
+			message = "Please fill out all three text boxes";
+			url = "/join_email_list.jsp";
+		}else {
+			message = "";
+			
+			// EmailList.txt absolute file path on server 
+			SC = this.getServletContext(); 
+			String path = SC.getRealPath("/WEB-INF/EmailList.txt");
+			UserIO.add(user, path);
+			
+			url = "/display_email_entry.jsp";
+		}
 		
 		request.setAttribute("user", user); // Set attribute to request object
+		request.setAttribute("message", message); // Set attribute to request message error
 		
 		// URL for response forwarding
-		String url = "/display_email_entry.jsp";
 		RequestDispatcher dispatcher =  request.getServletContext().getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 		
@@ -55,17 +68,15 @@ public class AddToEmailListServlet extends HttpServlet{
 		System.out.printf("%s last_name %s\n", TAG ,lastName);
 		System.out.printf("%s email_address %s\n", TAG ,email);
 		
-		response.sendRedirect("http://www.google.com");
-	
 		super.doPost(request, response);
 	}
 	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// Do post method call if post is not invoked 
-		doPost(req, resp);
+		doPost(request, response);
 		
-		super.doGet(req, resp);
+		super.doGet(request, response);
 	}
 }

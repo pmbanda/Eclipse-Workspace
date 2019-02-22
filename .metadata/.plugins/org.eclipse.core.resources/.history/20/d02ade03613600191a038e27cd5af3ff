@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>SurveyApplication</display-name>
+  <description>Survey Application Project</description>
+  
+  <context-param>
+  	<param-name>companyEmailAddress</param-name>
+  	<param-value>pmbandaft@gmail.com</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>TestServlet</servlet-name>
+  	<servlet-class>org.servlet.TestServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TestServlet</servlet-name>
+  	<url-pattern>/testServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>AddToEmailListServlet</servlet-name>
+  	<servlet-class>email.AddToEmailListServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>AddToEmailListServlet</servlet-name>
+  	<url-pattern>/addToEmailList</url-pattern>
+  </servlet-mapping>
+   
+   <!-- 
+   <error-page>
+  	<error-code></error-code>
+  	<location></location>
+  </error-page>
+  <error-page>
+  	<exception-type></exception-type>
+  	<location></location>
+  </error-page>
+    -->
+  
+  
+   
+  <welcome-file-list>
+    <welcome-file>join_email_list.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

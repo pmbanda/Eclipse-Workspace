@@ -1,31 +1,34 @@
 <!-- Header page include -->
+<%@page import="java.util.*, business.User, data.UserIO"%>
 <jsp:include page="header.jsp" ></jsp:include>
 
 <h2>Survey</h2>
 
 <p>If you have a moment we would appreciate if you fill out this survey</p>
 
-<h3>Your Information</h3>
+<h4>Your Information</h4>
 <br>
+<div>
 
+</div>
 <form action="addToEmailList" method="get">
 
 	<table>
 		<tr>
 			<td>First name:</td>
-			<td><input type="text" name="firstname" required placeholder="Enter first name"> </td>
+			<td><input type="text" class="form-control" name="firstname" required placeholder="Enter first name"> </td>
 		</tr>
 		<tr>
 			<td>Last name:</td>
-			<td><input type="text" name="lastname" required placeholder="Enter last name"></td>
+			<td><input type="text" class="form-control" name="lastname" required placeholder="Enter last name"></td>
 		</tr>
 		<tr>
 			<td>Email:</td>
-			<td><input type="email" name="email" required placeholder="Enter email address"></td>
+			<td><input type="email" class="form-control" name="email" required placeholder="Enter email address"></td>
 		</tr>
 		<tr>
 			<td>DOB:</td>
-			<td><input type="date" name="dob" placeholder="Enter DOB"></td>
+			<td><input type="date" class="form-control" name="dob" placeholder="Enter DOB"></td>
 		</tr>
 	</table>
 	
@@ -49,7 +52,7 @@
 	
 	
 	<h3>Please contact me by?</h3>
-	<select name="contact">
+	<select name="contact" class="custom-select" >
 		<option value="Email">Email</option>
 		<option value="Phone">Phone</option>
 		<option value="PostalMail">Postal mail</option>
@@ -58,7 +61,7 @@
 	<br><br>
 	
 	<h3>Paper Back?</h3>
-	<select name="paperback" multiple>
+	<select name="paperback" multiple class="custom-select">
 		<option value="Newspaper">Newspaper</option>
 		<option value="Calendar">Calendar</option>
 		<option value="Book">Book</option>
@@ -70,16 +73,10 @@
 	 <textarea name="comment" rows="5" cols="40" placeholder="Enter your comment here"></textarea>
 	
 	<br><br>
-	<input type="submit" value="Submit" onclick="return validate(this.form)"> 
-	<input type="reset" value="Reset">
+	<input type="submit" class="btn btn-primary" value="Submit" onclick="return validate(this.form)"> 
+	<input type="reset" class="btn btn-primary" value="Reset">
 </form>
 <br><br>
-<p>(JAVA DATE)Todays Date is <%= new java.util.Date().toString() %></p>
-<p>(JAVASCRIPT DATE)</p>
-<h3 id="dateDisplay"></h3>
-
-<script type="text/javascript" src="script/form_entry.js">
-</script>
 
 <!-- Footer page include -->
 <jsp:include page="footer.jsp" ></jsp:include>

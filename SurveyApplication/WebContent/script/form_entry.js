@@ -1,8 +1,9 @@
+
 function validate(form){
 		let value = false
 		if(form.firstname.value === ""){
 			alert("Please fill in your first name");
-			form.firstname.focus();
+			form.firstname.foccu();
 			return value
 		}
 		if(form.lastname.value === ""){
@@ -21,8 +22,8 @@ function validate(form){
 		return value
 	}
 	
-	function ticker(){
-		document.getElementById("dateDisplay").innerHTML = new Date();
-	}
+function ticker(){
+	document.getElementById("dateDisplay").innerHTML = new Date();
+}
 	
-	setInterval(ticker, 1000);
+setInterval(ticker, 1000);

@@ -33,3 +33,5 @@ Feb 20, 2019 17:57:07.55 [4448:3792:0220/175707.550:ERROR:connection_factory_imp
 Feb 20, 2019 17:57:24.09 [4448:3792:0220/175724.099:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
 Feb 20, 2019 23:20:06.92 [4448:3792:0220/232006.921:ERROR:socket_stream.cc(219)] Closing stream with result -2
 Feb 20, 2019 23:20:09.58 [4448:3792:0220/232007.347:ERROR:connection_factory_impl.cc(411)] Failed to connect to MCS endpoint with error -21
+Feb 21, 2019 02:22:48.74 [4448:14564:0221/022248.741:ERROR:http_bridge.cc(126)] NOT IMPLEMENTED
+Feb 21, 2019 02:22:49.11 [4448:3792:0221/022249.116:ERROR:browser_process_sub_thread.cc(209)] Waited 24 ms for network service

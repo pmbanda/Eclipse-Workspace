@@ -6,8 +6,8 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Test Jsp</title>
-		<link rel=stylesheet href=styles/survey.css />
+		<link rel=stylesheet href=styles/bootstrap.css />
 	</head>
-<body>
+<body class="container">
 
 <img alt="Murach Logo" src="images/murachlogo.jpg">
