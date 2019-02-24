@@ -17,7 +17,7 @@ public class AddToEmailListServlet extends HttpServlet{
 	// global variable declaration
 	private final String TAG = "org.servlet.AddToEmailListServlet";
 	private static int count = 0;
-	String firstName, lastName, email, comment, dateOfBirth, information, newsletter, contact;
+	String firstName, lastName, email, feedback, dateOfBirth, favSong, information, newsletter, contact;
 	private ServletContext SC = null;
 	
 	@Override
@@ -28,11 +28,12 @@ public class AddToEmailListServlet extends HttpServlet{
 		lastName = request.getParameter("lastname");
 		email = request.getParameter("email");
 		
-//		comment = request.getParameter("comment");
-//		dateOfBirth = request.getParameter("dob");
-//		information = request.getParameter("info");
-//		newsletter = request.getParameter("newsletter");
-//		contact = request.getParameter("contact");
+		dateOfBirth = request.getParameter("dob");
+		information = request.getParameter("info");
+		contact = request.getParameter("contact");
+		favSong = request.getParameter("song");
+		feedback = request.getParameter("feedback");
+		newsletter = request.getParameter("newsletter");
 		
 		// Instantiate user
 		User user = new User(firstName, lastName, email);
@@ -56,7 +57,13 @@ public class AddToEmailListServlet extends HttpServlet{
 		}
 		
 		request.setAttribute("user", user); // Set attribute to request object
-		request.setAttribute("message", message); // Set attribute to request message error
+		request.setAttribute("message", message); 
+		request.setAttribute("dateOfBirth", dateOfBirth); 
+		request.setAttribute("information", information);
+		request.setAttribute("contact", contact); 
+		request.setAttribute("favSong", favSong); 
+		request.setAttribute("feedback", feedback); 
+		request.setAttribute("newsletter", newsletter); 
 		
 		// URL for response forwarding
 		RequestDispatcher dispatcher =  request.getServletContext().getRequestDispatcher(url);
@@ -68,7 +75,7 @@ public class AddToEmailListServlet extends HttpServlet{
 		System.out.printf("%s last_name %s\n", TAG ,lastName);
 		System.out.printf("%s email_address %s\n", TAG ,email);
 		
-		super.doPost(request, response);
+		//super.doPost(request, response);
 	}
 	
 	@Override
@@ -77,6 +84,6 @@ public class AddToEmailListServlet extends HttpServlet{
 		// Do post method call if post is not invoked 
 		doPost(request, response);
 		
-		super.doGet(request, response);
+		//super.doGet(request, response);
 	}
 }

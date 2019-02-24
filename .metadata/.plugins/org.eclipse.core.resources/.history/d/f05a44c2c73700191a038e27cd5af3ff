@@ -1,0 +1,17 @@
+<%@page import="java.util.Date"%>
+
+<footer class="bg-primary" style="position: fixed;">
+
+<div style="text-align: center">
+	<p>Contact information:<a href="mailto:someone@example.com">
+	  Email Contact</a>
+	  &copy All Rights reserved, no animals harmed during WebSite production &regMansory Inc</p> <p id="dateDisplay"></p>
+</div>
+
+</footer>
+
+<script type="text/javascript" src="script/form_entry.js">
+</script>
+
+</body>
+</html>
