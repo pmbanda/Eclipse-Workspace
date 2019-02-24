@@ -58,7 +58,7 @@
 			</tr>
 			<tr>
 				<td>Newsletter:</td>
-				<td><%=newsletter == null ? "False" : "True"  %></td>
+				<td><%=newsletter.equalsIgnoreCase("on") ? "True" : "False"  %></td>
 			</tr>
 			<tr>
 				<td>Feedback:</td>
