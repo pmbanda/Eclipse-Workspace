@@ -10,7 +10,7 @@
 	String dateOfBirth = (String)request.getAttribute("dateOfBirth");
 	String information = (String)request.getAttribute("information");
 	String contact = (String)request.getAttribute("contact");
-	String favSong = (String)request.getAttribute("favSong");
+	String[] favSong = (String[])request.getAttribute("favSong");
 	String feedback = (String)request.getAttribute("feedback");
 	String newsletter = (String)request.getAttribute("newsletter"); 
 	
@@ -22,7 +22,7 @@
 	}
 
 %>
-<div class="container">
+
 	<h1>Thanks for joining the email list</h1>
 
 	<p>Here is the information that you entered:</p>
@@ -45,7 +45,7 @@
 				<td><%=dateOfBirth == null ? "" : dateOfBirth %></td>
 			</tr>
 			<tr>
-				<td>Information:</td>
+				<td>Info:</td>
 				<td><%=information == null ? "" : information  %></td>
 			</tr>
 			<tr>
@@ -54,8 +54,24 @@
 			</tr>
 			<tr>
 				<td>Song:</td>
-				<td><%=favSong == null ? "" : favSong  %></td>
-			</tr>
+				<td> 
+					<%
+						if(favSong != null && favSong.length > 1  )
+						{
+							for(int i = 0; i < favSong.length; i++)
+							{
+									out.println(favSong[i] + " "); 
+							}
+						}
+						else if(favSong != null && favSong.length == 1)
+						{
+								out.println(favSong[0]);
+					    }else{
+					    	out.println("");
+					    }
+					%>
+				</td>
+			</tr> 
 			<tr>
 				<td>Newsletter:</td>
 				<td><%=newsletter == null ? "False" : "True"  %></td>
@@ -74,11 +90,11 @@
 	below</p>
 	
 	<form action="join_email_list.jsp" method="get">
-		<input type="submit" value="Return">
+		<input type="submit" class="btn btn-primary" value="Return">
 	</form>
 	
 <br><br>
-</div>
+
 
 <!-- Foooter page include -->
 <jsp:include page="footer.jsp" ></jsp:include>

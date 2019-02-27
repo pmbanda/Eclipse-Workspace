@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<%@ page isErrorPage="true" %>
+
+<!-- Header page include -->
+<jsp:include page="header.jsp" ></jsp:include>
+
+<div class="container" >
+
+<div class="jumbotron">
+  <h2 class="display-6" style="color: red;">Java Global Error Page</h2>
+  <p>Sorry Java has thrown an exception</p>
+  <p class="lead">This page shows that you have encountered an error please don't panic and remember its not the end of the world. Write down the date and time of error or capture a screen shot and i will fix it later ( via Apache Tomcat Logs ). Thank you for your patience. </p>
+</div>
+
+<h2 style="color: red;">Details</h2>
+<p>
+Type: <%= exception.getClass() %> <br>
+Message: <%= exception.getMessage() %> <br>
+</p>
+
+</div>
+<!-- Footer page include -->
+<jsp:include page="footer.jsp" ></jsp:include>

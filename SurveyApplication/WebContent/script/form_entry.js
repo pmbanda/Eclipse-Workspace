@@ -1,5 +1,6 @@
 
-function validate(form){
+function validate(form)
+{
 		let value = false
 		if(form.firstname.value === ""){
 			alert("Please fill in your first name");
@@ -20,10 +21,16 @@ function validate(form){
 		}
 			
 		return value
-	}
-	
-function ticker(){
-	document.getElementById("dateDisplay").innerHTML = new Date();
 }
 	
-setInterval(ticker, 1000);
+
+$( document ).ready(function() {
+	
+	function ticker(){
+		var dateTime = new Date();
+		var dateValuePointer = document.getElementById("dateDisplay");
+		dateValuePointer.innerHTML = dateTime.toString().substring(0,25);
+	}
+	
+	setInterval(ticker, 1000);
+});

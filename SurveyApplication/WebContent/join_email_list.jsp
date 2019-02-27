@@ -1,12 +1,27 @@
 <!-- Header page include -->
 <%@page import="java.util.*, business.User, data.UserIO"%>
 <jsp:include page="header.jsp" ></jsp:include>
+<%!
+	static int count = 0;
+ %>
 
 
-<div class="container" >
-<h2>Survey</h2>
 
-<p>If you have a moment we would appreciate if you fill out this survey</p>
+<div class="jumbotron" style="padding-top: 10px; padding-bottom: 10px">
+<div class="row">
+	<div class="col-md-8">
+	  <h1 class="display-6">Survey Application!</h1>
+	  <p class="lead">If you have a moment we would appreciate if you fill out this survey </p>
+	  <h4> Today: <span id="dateDisplay" style="color: green;"></span> </h4>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<small><bold>Page Visits: <%=++count %></bold></small>
+	</div>
+</div> 
+</div>
+
 
 <legend>Your Information</legend>
 <br>
@@ -47,11 +62,11 @@
 				
 				<legend>Please contact me by?</legend>
 				<select name="contact">
-					<option value="email">Email</option>
-					<option value="phone">Phone</option>
-					<option value="whatsapp">Whatsapp</option>
-					<option value="reddit">Reddit</option>
-					<option value="snapchat">Snap Chat</option>
+					<option value="Email">Email</option>
+					<option value="Phone">Phone</option>
+					<option value="Whatsapp">Whatsapp</option>
+					<option value="Reddit">Reddit</option>
+					<option value="Snapchat">Snap Chat</option>
 				</select>
 				
 				<br>
@@ -59,13 +74,13 @@
 				
 				<legend>Favorite song genre?</legend>
 				<select name="song" multiple>
-					<option value="country">Country</option>
-					<option value="rock">Rock</option>
-					<option value="rap">Rap</option>
-					<option value="pop">Pop</option>
-					<option value="hiphop">Hip Hop</option>
-					<option value="rnb">Rhythm and Blues</option>
-					<option value="jazz">Jazz</option>
+					<option value="Country">Country</option>
+					<option value="Rock">Rock</option>
+					<option value="Rap">Rap</option>
+					<option value="Pop">Pop</option>
+					<option value="HipHop">Hip Hop</option>
+					<option value="RnB">Rhythm and Blues</option>
+					<option value="Jazz">Jazz</option>
 				</select>
 				
 				<br><br>
@@ -99,7 +114,6 @@
 		    
 		 </div>
 	</div>
-</div>
 
 
 <!-- Footer page include -->
