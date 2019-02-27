@@ -27,7 +27,7 @@
 
 	<legend>Here is the information that you entered:</legend>
 	<small><italics><span style="color:red;"><%--=message--%></span></italics></small>
-	<table class="table" >
+	<table class="table" width="50px">
 			<tr class="table-active">
 				<td>First name:</td>
 				<td><%=user.getFirstName() %></td>

@@ -25,34 +25,34 @@
 
 	<h1>Thanks for joining the email list</h1>
 
-	<legend>Here is the information that you entered:</legend>
+	<p>Here is the information that you entered:</p>
 	<small><italics><span style="color:red;"><%--=message--%></span></italics></small>
-	<table class="table" >
-			<tr class="table-active">
+	<table class="table">
+			<tr>
 				<td>First name:</td>
 				<td><%=user.getFirstName() %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Last name:</td>
 				<td><%=user.getLastName() %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Email:</td>
 				<td><%=user.getEmailAddress() %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Birth Date:</td>
 				<td><%=dateOfBirth == null ? "" : dateOfBirth %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Info:</td>
 				<td><%=information == null ? "" : information  %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Contact:</td>
 				<td><%=contact == null ? "" : contact  %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Song:</td>
 				<td> 
 					<%
@@ -72,11 +72,11 @@
 					%>
 				</td>
 			</tr> 
-			<tr class="table-active">
+			<tr>
 				<td>Newsletter:</td>
 				<td><%=newsletter == null ? "False" : "True"  %></td>
 			</tr>
-			<tr class="table-active">
+			<tr>
 				<td>Feedback:</td>
 				<td><%=feedback == null ? "" : feedback  %></td>
 			</tr>

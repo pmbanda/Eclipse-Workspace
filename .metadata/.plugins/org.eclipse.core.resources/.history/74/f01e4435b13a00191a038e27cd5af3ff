@@ -2,29 +2,22 @@
 <%@page import="java.util.*, business.User, data.UserIO"%>
 <jsp:include page="header.jsp" ></jsp:include>
 <%!
-	
 	static int count = 0;
- %>
- <%
- 	Enumeration<String> headers = request.getHeaderNames();
  %>
 
 <div class="jumbotron" style="padding-top: 10px; padding-bottom: 10px">
-
-	<div class="row">
-		<div class="col-md-7">
-		  <h1 class="display-6">Survey Application!</h1>
-		  <p class="lead">If you have a moment we would appreciate if you fill out this survey </p>
-		  <h4> Today: <span id="dateDisplay" style="color: green;"></span> </h4>
-		</div>
-		<div class="col-md-5">
-			<p class="lead">Page Visits: <%=++count %> <br> 
-			Browser <%=request.getHeader("user-agent") %>
-			</p>
-			
-		</div>
+<div class="row">
+	<div class="col-md-8">
+	  <h1 class="display-6">Survey Application!</h1>
+	  <p class="lead">If you have a moment we would appreciate if you fill out this survey </p>
+	  <h4> Today: <span id="dateDisplay" style="color: green;"></span> </h4>
 	</div>
-
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<small><bold>Page Visits: <%=++count %></bold></small>
+	</div>
+</div> 
 </div>
 
 <legend>Your Information</legend>
@@ -35,19 +28,19 @@
 				<form action="addToEmailList" method="get">
 			
 				<table class="table">
-					<tr>
+					<tr class="table-success">
 						<td>First name:</td>
 						<td><input type="text" class="form-control" name="firstname" required placeholder="Enter first name"> </td>
 					</tr>
-					<tr>
+					<tr class="table-warning">
 						<td>Last name:</td>
 						<td><input type="text" class="form-control" name="lastname" required placeholder="Enter last name"></td>
 					</tr >
-					<tr>
+					<tr class="table-info">
 						<td>Email:</td>
 						<td><input type="email" class="form-control" name="email" required placeholder="Enter email address"></td>
 					</tr>
-					<tr>
+					<tr class="table-danger">
 						<td>DOB:</td>
 						<td><input type="date" class="form-control" name="dob" placeholder="Enter DOB"></td>
 					</tr>
