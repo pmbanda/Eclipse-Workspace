@@ -12,7 +12,7 @@
 	</head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-	  <a class="navbar-brand" href="#">Survey Application</a>
+	  <a class="navbar-brand" href="join_email_list.jsp">Survey Application</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -26,7 +26,7 @@
 	        <a class="nav-link" href="#">Features</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Pricing</a>
+	        <a class="nav-link" href="browser_info.jsp">Browser Info</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="about.jsp">About</a>

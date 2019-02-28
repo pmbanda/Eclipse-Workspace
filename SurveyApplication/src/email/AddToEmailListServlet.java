@@ -2,12 +2,17 @@ package email;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Random;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import business.User;
 import data.UserIO;
 
@@ -15,15 +20,19 @@ public class AddToEmailListServlet extends HttpServlet{
 	
 	private static final long serialVersionUID = 1843030009760934100L;
 	// global variable declaration
+	@SuppressWarnings("unused")
 	private final String TAG = "org.servlet.AddToEmailListServlet";
 	String firstName, lastName, email, feedback, dateOfBirth, information, newsletter, contact, message;
 	String []favSong;
 	User user;
 	private ServletContext SC = null;
+	public HttpSession session;
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		
+		session = request.getSession();
+		
 		// Obtain page parameter values (object data variables)
 		firstName = request.getParameter("firstname");
 		lastName = request.getParameter("lastname");
@@ -59,8 +68,9 @@ public class AddToEmailListServlet extends HttpServlet{
 			url = "/display_email_entry.jsp";
 		}
 		
-		// Set attribute to request object
-		request.setAttribute("user", user); 
+		session.setAttribute("user", user);
+		//Set attribute to request object
+		//request.setAttribute("user", user); 
 		request.setAttribute("message", message); 
 		request.setAttribute("dateOfBirth", dateOfBirth); 
 		request.setAttribute("information", information);
@@ -76,6 +86,8 @@ public class AddToEmailListServlet extends HttpServlet{
 		
 		
 		//super.doPost(request, response);
+		
+		
 	}
 	
 	@Override

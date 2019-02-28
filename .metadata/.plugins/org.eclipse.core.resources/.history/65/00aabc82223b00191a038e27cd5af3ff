@@ -1,0 +1,60 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="javax.servlet.http.Cookie" %>
+<!-- Header page include -->
+<%@include file="header.jsp"%>
+<%
+
+%>
+<div class="jumbotron" style="padding-top: 10px; padding-bottom: 10px">
+
+	<div class="row">
+		<div class="col-md-7">
+		
+		  <legend class="lead">Browser Information Page!</legend>
+		  <h4> The following contains the browser details:</h4>
+		  <h4>Browser <%=request.getHeader("user-agent") %></h4>
+		  <h4>Session Id <%=session.getId() %></h4>
+		  
+		  <br>
+		  
+		  <h4>Cookies</h4>
+		  
+		  <legend class="lead">Heres a table with all the cookies that this<br>
+		  browser is sending to the current server</legend>
+		  
+		  <br>
+		  <table class="table">
+		  <%
+		  	
+		  	Cookie[] cookie = request.getCookies();
+		  
+		  	for(int i = 0; i < cookie.length; i++){%>
+		  		<tr class="table-active">
+		  			<td><%=cookie[i].getName() %></td>
+		  			<td><%=cookie[i].getValue() %></td>
+		  		</tr>
+		  	<%}
+		  
+		  	
+		  %>
+		  </table>
+		  
+		  
+		</div>
+	</div>
+	
+
+</div>
+			<p>
+		    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 			enim ad 	minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 			dolor in reprehenderit 	in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 			proident, sunt in culpa qui 	officia deserunt mollit anim id est laborum.
+		    </p>
+		    <p>
+		    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 			enim ad 	minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 			dolor in reprehenderit 	in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 			proident, sunt in culpa qui 	officia deserunt mollit anim id est laborum.
+		    </p>
+		    <p>
+		    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 			enim ad 	minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 			dolor in reprehenderit 	in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 			proident, sunt in culpa qui 	officia deserunt mollit anim id est laborum.
+		    </p>			
+
+<!-- Footer page include -->
+<%@include file="footer.jsp"%>
