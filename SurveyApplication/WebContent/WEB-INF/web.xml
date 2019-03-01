@@ -4,11 +4,53 @@
   <description>Survey Application Project</description>
   
   <!-- Parameter available to all the servlets in the application -->
+  
+  <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+    <welcome-file>join_email_list.jsp</welcome-file>
+  </welcome-file-list>
+  
   <context-param>
   	<param-name>companyEmailAddress</param-name>
   	<param-value>pmbandaft@gmail.com</param-value>
   </context-param>
   
+  <servlet>
+  	<servlet-name>CheckUserServlet</servlet-name>
+  	<servlet-class>download.CheckUserServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>CheckUserServlet</servlet-name>
+  	<url-pattern>/checkUser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RegisterUserServlet</servlet-name>
+  	<servlet-class>download.RegisterUserServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>RegisterUserServlet</servlet-name>
+  	<url-pattern>/registerUser</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   
+   
+   <!--
+   	<error-page>
+  		<error-code>404</error-code>
+  		<location>/error404.jsp</location>
+  	</error-page>
+  -->
+  <error-page>
+  	<exception-type>java.lang.Throwable</exception-type>
+  	<location>/error_java.jsp</location>
+  </error-page>
+   
   <servlet>
   	<servlet-name>TestServlet</servlet-name>
   	<servlet-class>org.servlet.TestServlet</servlet-class>
@@ -34,22 +76,5 @@
   	<url-pattern>/addToEmailList</url-pattern>
   </servlet-mapping>
    
-   
-   <!--
-   	<error-page>
-  		<error-code>404</error-code>
-  		<location>/error404.jsp</location>
-  	</error-page>
-  -->
-  <error-page>
-  	<exception-type>java.lang.Throwable</exception-type>
-  	<location>/error_java.jsp</location>
-  </error-page>
-   
   
-  
-   
-  <welcome-file-list>
-    <welcome-file>join_email_list.jsp</welcome-file>
-  </welcome-file-list>
 </web-app>
