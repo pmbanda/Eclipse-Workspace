@@ -6,7 +6,9 @@ public class User {
 	private String emailAddress;
 	
 	public User(){
-		
+		firstName = "";
+		lastName = "";
+		emailAddress = "";
 	}
 	public User(String firstName, String lastName, String emailAddress) {
 		super();

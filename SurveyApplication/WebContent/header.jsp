@@ -23,7 +23,10 @@
 	        <a class="nav-link" href="join_email_list.jsp">Home <span class="sr-only">(current)</span></a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="index.jsp">Compact Discs</a>
+	        <a class="nav-link" href="index.jsp">Albums</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="register.jsp">Albums Login</a>
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="browser_info.jsp">Browser Info</a>

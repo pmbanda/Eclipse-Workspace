@@ -1,9 +1,0 @@
-import javax.servlet.http.HttpServlet;
-
-public class TestServlet extends HttpServlet {
-
-	public TestServlet() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

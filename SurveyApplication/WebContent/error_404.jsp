@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@ page isErrorPage="true" %>
+
 <!-- Header page include -->
 <jsp:include page="header.jsp" ></jsp:include>
 

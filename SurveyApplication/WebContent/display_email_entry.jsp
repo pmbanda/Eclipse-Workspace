@@ -4,23 +4,7 @@
 
 <%
 	// Obtain user object from the request object
-	//User user = (User)request.getAttribute("user");
 	User user = (User)session.getAttribute("user");
-
-	String message = (String)request.getAttribute("message");
-	String dateOfBirth = (String)request.getAttribute("dateOfBirth");
-	String information = (String)request.getAttribute("information");
-	String contact = (String)request.getAttribute("contact");
-	String[] favSong = (String[])request.getAttribute("favSong");
-	String feedback = (String)request.getAttribute("feedback");
-	String newsletter = (String)request.getAttribute("newsletter"); 
-	
-	if(user == null){
-		user = new User();
-	}
-	if(message == null){
-		message = "";
-	}
 
 %>
 
@@ -31,32 +15,32 @@
 	<table class="table" >
 			<tr class="table-active">
 				<td>First name:</td>
-				<td><%=user.getFirstName() %></td>
+				<td>${user.firstName}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Last name:</td>
-				<td><%=user.getLastName() %></td>
+				<td>${user.lastName}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Email:</td>
-				<td><%=user.getEmailAddress() %></td>
+				<td>${user.emailAddress}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Birth Date:</td>
-				<td><%=dateOfBirth == null ? "" : dateOfBirth %></td>
+				<td>${dateOfBirth}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Info:</td>
-				<td><%=information == null ? "" : information  %></td>
+				<td>${ information}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Contact:</td>
-				<td><%=contact == null ? "" : contact  %></td>
+				<td>${contact}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Song:</td>
-				<td> 
-					<%
+				<!--  <td> <%--${favSong}-->
+					<%--
 						if(favSong != null && favSong.length > 1  )
 						{
 							for(int i = 0; i < favSong.length; i++)
@@ -70,16 +54,17 @@
 					    }else{
 					    	out.println("");
 					    }
-					%>
-				</td>
+					--%>
+					
+				</td>-->
 			</tr> 
 			<tr class="table-active">
 				<td>Newsletter:</td>
-				<td><%=newsletter == null ? "False" : "True"  %></td>
+				<td>${newsletter}</td>
 			</tr>
 			<tr class="table-active">
 				<td>Feedback:</td>
-				<td><%=feedback == null ? "" : feedback  %></td>
+				<td>${feedback}</td>
 			</tr>
 			
 	</table>

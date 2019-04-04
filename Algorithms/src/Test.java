@@ -1,33 +1,33 @@
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Test {
-
-	public static void main(String[] args) {
-		
-		for(int i = 0; i < 249; i++ ) {
-			System.out.println((char)i);
-		}
-		
-		Scanner sc = new Scanner(System.in);
-		String value = null;
-		
-		System.out.println("Please enter a value");
-		value = sc.next();
-		
-		System.out.println("You " + value);
-		System.out.println("You pressed " +  value.codePointAt(0) );
-		
-		if(value.codePointAt(0) == 99) {
-			System.out.println("You pressed C");
-		}else {
-			System.out.println("Failed");
-		}
-		
-		sc.close();
-		
-		
-	}
-
+    // Driver code 
+    public static void main (String[] args) 
+    { 
+    	// Declare two strings 
+        String a = "Hlo"; 
+        String b = "World"; 
+          
+        // Print String before swapping 
+        System.out.println("Strings before swap: a = " +  
+                                       a + " and b = "+b); 
+          
+        // append 2nd string to 1st 
+        a = a + b; 
+          
+        // store intial string a in string b 
+        b = a.substring(0,a.length()-b.length()); 
+          
+        // store initial string b in string a 
+        a = a.substring(b.length()); 
+          
+        // print String after swapping 
+        System.out.println("Strings after swap: a = " +  
+                                     a + " and b = " + b);         
+    	
+    	
+    
+    } 
+    
 }
