@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!-- Header page include -->
 <%@include file="header.jsp"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <h5>To register for our downloads, enter your name and email<br> address below. Then, click on the submit button. </h5>
 
@@ -16,13 +17,14 @@
 			</tr>
 			<tr>
 				<th>${bandName}</th>
-				<th><audio src="/SurveyApplication/WebContent/sound/${productCode}/${songTitle}" controls></audio></th>
+				<th><audio preload="auto" src="${musicPath}" controls></audio></th>
+				<c:out value="${musicPath}" ></c:out>
 			</tr>
 		</table>
 		
-		<legend class="lead"> <a href="<%=response.encodeUrl("index.jsp")%>">View a List Of Albums.</a></legend>
+		<legend class="lead"> <a href="<c:url value='/index.jsp' />" />View a List Of Albums.</a> </legend>
 				
-		<legend class="lead"> <a href="<%=response.encodeUrl("browser_info.jsp")%>">View all Cookies.</a></legend>
+		<legend class="lead"> <a href="<c:url value='/browser_info.jsp' />" />View all Cookies.</a></legend>
 			
 				
 <!-- Footer page include -->

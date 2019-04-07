@@ -63,6 +63,10 @@ public class CheckUserServlet extends HttpServlet{
 			url = "/dynamic_download.jsp";
 		}
 		
+		ServletContext sc = getServletContext(); 
+		String musicPath = sc.getRealPath("sound/" + productCode + "/" + songTitle);
+		session.setAttribute("musicPath", musicPath);
+		
 		// forward to the view
 		RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
 		rd.forward(request, response);
