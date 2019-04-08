@@ -22,7 +22,7 @@ public class StaticInitialization {
         System.out.println("Long:: " + Long.class.getClassLoader()); 
         System.out.println("Person:: " + Person.class.getClassLoader()); 
         System.out.println("People:: " + People.class.getClassLoader());  
-
+        
 	}
 
 }

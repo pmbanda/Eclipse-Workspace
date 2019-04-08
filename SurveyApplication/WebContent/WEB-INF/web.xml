@@ -1,93 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>SurveyApplication</display-name>
-  <description>Survey Application Project</description>
-  
-  <!-- Parameter available to all the servlets in the application -->
-  
-  <welcome-file-list>
-  	<welcome-file>index.jsp</welcome-file>
-    <welcome-file>join_email_list.jsp</welcome-file>
-  </welcome-file-list>
-  
-  <context-param>
-  	<param-name>companyEmailAddress</param-name>
-  	<param-value>pmbandaft@gmail.com</param-value>
-  </context-param>
-  
-  <servlet>
-  	<servlet-name>CheckUserServlet</servlet-name>
-  	<servlet-class>download.CheckUserServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>CheckUserServlet</servlet-name>
-  	<url-pattern>/checkUser</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>RegisterUserServlet</servlet-name>
-  	<servlet-class>download.RegisterUserServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>RegisterUserServlet</servlet-name>
-  	<url-pattern>/registerUser</url-pattern>
-  </servlet-mapping>
-  
-  
-  <servlet>
-  	<servlet-name>Cart</servlet-name>
-  	<servlet-class>data.Cart</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>Cart</servlet-name>
-  	<url-pattern>/cart</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-   
-   
-   <!--
-   	<error-page>
-  		<error-code>404</error-code>
-  		<location>/error404.jsp</location>
-  	</error-page>
-  -->
-  <!-- 
-  <error-page>
-  	<exception-type>java.lang.Throwable</exception-type>
-  	<location>/error_java.jsp</location>
-  </error-page>
-   -->
-  
-   
-  <servlet>
-  	<servlet-name>TestServlet</servlet-name>
-  	<servlet-class>org.servlet.TestServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>TestServlet</servlet-name>
-  	<url-pattern>/testServlet</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>AddToEmailListServlet</servlet-name>
-  	<servlet-class>email.AddToEmailListServlet</servlet-class>
-  	<!-- Parameter available to (this) specific servlet in the application -->
-  		<init-param>
-  			<param-name></param-name>
-  			<param-value></param-value>
-  		</init-param>
-  </servlet>
-  
-  <servlet-mapping>
-  	<servlet-name>AddToEmailListServlet</servlet-name>
-  	<url-pattern>/addToEmailList</url-pattern>
-  </servlet-mapping>
-   
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>SurveyApplication</display-name>
+	<description>Survey Application Project</description>
+
+	<!-- Parameter available to all the servlets in the application -->
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>join_email_list.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>companyEmailAddress</param-name>
+		<param-value>pmbandaft@gmail.com</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>CheckUserServlet</servlet-name>
+		<servlet-class>download.CheckUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CheckUserServlet</servlet-name>
+		<url-pattern>/checkUser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegisterUserServlet</servlet-name>
+		<servlet-class>download.RegisterUserServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegisterUserServlet</servlet-name>
+		<url-pattern>/registerUser</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>CartServlet</servlet-name>
+		<servlet-class>data.Cart</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CartServlet</servlet-name>
+		<url-pattern>/cart</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+
+	<error-page>S
+		<error-code>404</error-code>
+		<location>/error404.jsp</location>
+	</error-page>
+
+
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/error_java.jsp</location>
+	</error-page>
+
+
+
+	<servlet>
+		<servlet-name>TestServlet</servlet-name>
+		<servlet-class>org.servlet.TestServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TestServlet</servlet-name>
+		<url-pattern>/testServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AddToEmailListServlet</servlet-name>
+		<servlet-class>email.AddToEmailListServlet</servlet-class>
+		<!-- Parameter available to (this) specific servlet in the application -->
+		<init-param>
+			<param-name></param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddToEmailListServlet</servlet-name>
+		<url-pattern>/addToEmailList</url-pattern>
+	</servlet-mapping>
+
+
 </web-app>
