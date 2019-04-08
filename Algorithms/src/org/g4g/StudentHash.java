@@ -12,6 +12,11 @@ public class StudentHash {
 		last_roll++; 
 	} 
 
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
 	// Overriding hashCode() 
 	@Override
 	public int hashCode() 
